@@ -1,12 +1,15 @@
 <ng-include src="'views/header.html'"></ng-include>
 <div class="container-fluid">
-  <div class="dream" data-id = "{{dream._id}}">
+  <article class="detailDream" data-id = "{{dream._id}}">
     <a href="#/dreams/{{dream._id}}">
       <ng-include src="'views/dream.html'"></ng-include>
+      <p>
+        {{dream.description}}
+      </p>
     </a>
     <ng-include src="'views/reviews.html'"></ng-include>
     <a href="#/dreams/{{dream._id}}/review"><input type="button" name="review" value="Review This Item"></a>
     <a href="#/cart" ng-click = "addToCart(dream)"><input type="button" name="add" value="Add Item to Cart"></a>
-  </div>
+  </article>
 <ng-include src="'views/footer.html'"></ng-include>
 </div>
