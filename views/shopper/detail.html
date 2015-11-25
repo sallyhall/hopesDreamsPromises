@@ -1,0 +1,13 @@
+<div class="dream" data-id = "{{dream._id}}">
+  <img src={{dream.url}} alt="{{dream.title}}">
+  <h2 class = dreamTitle>{{dream.title}}</h2>
+  <h5 class = dreamPrice>{{dream.price}}</h5>
+  <p class="dreamDescription">{{dream.description}}</p>
+  <article ng-repeat = "review in dream.reviews">
+    <h3 class = "reviewName">{{review.name}}</h3>
+    <p class = "reviewText">{{review.text}}</p>
+    <span class = "reviewRating">{{review.rating}}</span>
+</article>
+  <a href="#/dreams/{{dream._id}}/review">Review This Item</a>
+  <a href="#/cart" ng-click = "addToCart(dream)">Add Item to Cart</a>
+</div>

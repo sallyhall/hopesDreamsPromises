@@ -1,0 +1,9 @@
+<article ng-repeat = "dream in dreams" class = "dream" data-id = "{{dream._id}}">
+  <a href="#/dreams/{{dream._id}}">
+    <img src={{dream.url}} alt="{{dream.title}}">
+    <h3 class = dreamTitle>{{dream.title}}</h3>
+    <h5 class = dreamPrice>{{dream.price}}</h5>
+    <span class="rating">Average Rating: {{dream.averageRating}}</span>
+  </a>
+  <a href="#/cart" ng-click = "addToCart(dream)">Add Item to Cart</a>
+</article>

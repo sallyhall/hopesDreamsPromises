@@ -1,0 +1,9 @@
+<article ng-repeat = "dream in dreams" class = "dream" data-id = "{{dream._id}}">
+  <a href="#/dreams/{{dream._id}}">
+    <img src={{dream.url}} alt="{{dream.title}}">
+    <h3 class = dreamTitle>{{dream.title}}</h3>
+    <h5 class = dreamPrice>{{dream.price}}</h5>
+  </a>
+  <a href="#/admin/{{dream._id}}/edit">Edit This Item</a>
+  <a href="#/admin" ng-click = "deleteDream(dream)">Delete</a>
+</article>

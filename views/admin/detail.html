@@ -1,0 +1,12 @@
+<div class="dream" data-id = "{{dream._id}}">
+  <img src={{dream.url}} alt="{{dream.title}}">
+  <h2 class = dreamTitle>{{dream.title}}</h2>
+  <h5 class = dreamPrice>{{dream.price}}</h5>
+  <p class="dreamDescription">{{dream.description}}</p>
+  <article ng-repeat = "review in dream.reviews">
+    <h3 class = "reviewName">{{review.name}}</h3>
+    <p class = "reviewText">{{review.text}}</p>
+    <span class = "reviewRating">{{review.rating}}</span>
+  </article>
+  <a href="#/admin/{{dream._id}}/edit">Edit This Item</a>
+</div>
