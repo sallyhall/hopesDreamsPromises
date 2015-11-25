@@ -1,8 +1,12 @@
-<div class="totalCost">Total: {{totalCost}}</div>
-<article ng-repeat = "dream in cartDreams" class = "dream" data-id = "{{dream._id}}">
-  <h3 class = dreamTitle>{{dream.title}}</h3>
-  <h5 class = dreamPrice>{{dream.price}}</h5>
-  <span class="quantity">{{dream.quantity}} in Cart</span>
-</article>
+<ng-include src="'views/header.html'"></ng-include>
+<div class="container-fluid">
+    <div class="totalCost">Total: {{totalCost|currency}}</div>
+  <article ng-repeat = "dream in cartDreams" class = "dream" data-id = "{{dream._id}}">
+    <h3 class = dreamTitle>{{dream.title}}</h3>
+    <h5 class = dreamPrice>{{dream.price|currency}}</h5>
+    <span class="quantity">{{dream.quantity}} in Cart</span>
+  </article>
 
-<a href="#/"><input type="button" ng-click = "emptyCart()" name="home" value="Return Home"></a>
+  <a href="#/"><input type="button" ng-click = "emptyCart()" name="home" value="Return Home"></a>
+</div>
+<ng-include src="'views/footer.html'"></ng-include>

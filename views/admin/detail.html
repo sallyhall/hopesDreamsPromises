@@ -1,12 +1,12 @@
-<div class="dream" data-id = "{{dream._id}}">
-  <img src={{dream.url}} alt="{{dream.title}}">
-  <h2 class = dreamTitle>{{dream.title}}</h2>
-  <h5 class = dreamPrice>{{dream.price}}</h5>
-  <p class="dreamDescription">{{dream.description}}</p>
-  <article ng-repeat = "review in dream.reviews">
-    <h3 class = "reviewName">{{review.name}}</h3>
-    <p class = "reviewText">{{review.text}}</p>
-    <span class = "reviewRating">{{review.rating}}</span>
-  </article>
-  <a href="#/admin/{{dream._id}}/edit">Edit This Item</a>
+<ng-include src="'views/header.html'"></ng-include>
+<div class="container-fluid">
+  <div class="dream" data-id = "{{dream._id}}">
+    <a href="#/admin/{{dream._id}}">
+      <ng-include src="'views/dream.html'"></ng-include>
+    </a>
+    <ng-include src="'views/reviews.html'"></ng-include>
+    <a class="dreamLink" href="#/admin/{{dream._id}}/edit"><input type="button" name="edit" value="Edit This Item"></a>
+    <a class="dreamLink"  href="#/admin" ng-click = "deleteDream(dream)"><input type="button" name="delete" value="Delete This Item"></a>
+  </div>
 </div>
+<ng-include src="'views/footer.html'"></ng-include>

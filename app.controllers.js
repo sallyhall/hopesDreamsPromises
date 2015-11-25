@@ -17,9 +17,12 @@
       DreamFactory.addReview(dream,review);
     };
   })
-  .controller('AdminController', function($scope,DreamFactory,AdminServices){
+  .controller('AdminController', function($scope,DreamFactory,AdminServices,$routeParams){
     DreamFactory.getDreams().success(function(dreams){
       $scope.dreams = dreams;
+      if($routeParams.dreamId){
+        $scope.dream = DreamFactory.getDream($scope.dreams,$routeParams.dreamId);
+      }
     });
     $scope.addDream = function(dream){
       AdminServices.createDream(dream);

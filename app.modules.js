@@ -30,19 +30,19 @@
       })
       .when('/admin/add',{
         templateUrl: '/views/admin/add.html',
-        controller: 'DreamsController'
+        controller: 'AdminController'
       })
       .when('/admin',{
         templateUrl: '/views/admin/list.html',
-        controller: 'DreamsController',
+        controller: 'AdminController',
       })
       .when('/admin/:dreamId',{
         templateUrl: '/views/admin/detail.html',
-        controller: 'DreamsController'
+        controller: 'AdminController'
       })
       .when('/admin/:dreamId/edit',{
         templateUrl: '/views/admin/edit.html',
-        controller: 'DreamsController'
+        controller: 'AdminController'
       });
     });
 

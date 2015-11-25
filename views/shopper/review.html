@@ -1,15 +1,15 @@
-<div class="dream" data-id = "{{dream._id}}">
-  <img src={{dream.url}} alt="{{dream.title}}">
-  <h2 class = dreamTitle>{{dream.title}}</h2>
-  <h5 class = dreamPrice>{{dream.price}}</h5>
-  <p class="dreamDescription">{{dream.description}}</p>
-  <article ng-repeat = "review in dream.reviews">
-    <h3 class = "reviewName">{{review.name}}</h3>
-    <p class = "reviewText">{{review.text}}</p>
-    <span class = "reviewRating">{{review.rating}}</span>
-  </article>
-  <input type="text" name="review-Name" ng-model="review.name" placeholder="Name">
-  <textarea name="review-Text" ng-model="review.text"> Review </textarea>
-  <input type="text" name="review-Rating" ng-model="review.rating" placeholder="1-5">
-  <a href="#/dreams/{{dream._id}}" ng-click="addReview(dream,review)"><input type="button"  name="dream-review-submit" value="Submit Review"></a>
+<ng-include src="'views/header.html'"></ng-include>
+<div class="container-fluid">
+  <div class="dream" data-id = "{{dream._id}}">
+    <a href="#/dreams/{{dream._id}}">
+      <ng-include src="'views/dream.html'"></ng-include>
+    </a>
+  </div>
+  <div class="reviewForm">
+    <input type="text" name="review-Name" ng-model="review.name" placeholder="Name">
+    <textarea name="review-Text" ng-model="review.text"> Review </textarea>
+    <input type="text" name="review-Rating" ng-model="review.rating" placeholder="1-5">
+    <a href="#/dreams/{{dream._id}}" ng-click="addReview(dream,review)"><input type="button"  name="dream-review-submit" value="Submit Review"></a>
+  </div>
 </div>
+<ng-include src="'views/footer.html'"></ng-include>

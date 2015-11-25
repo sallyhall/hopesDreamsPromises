@@ -23,9 +23,9 @@
         dream.reviews.push(review);
         var totalRating = 0;
         _.each(dream.reviews,function (review) {
-          totalRating+=(1.0*review.rating);
+          totalRating+=parseInt(review.rating);
         })
-        dream.averageRating = Math.floor(totalRating/dream.reviews.length*10)/10;
+        dream.averageRating = Math.floor((totalRating/dream.reviews.length)*10)/10;
       };
       return $http.put(url + '/' + dream._id,dream);
     };

@@ -7,3 +7,16 @@ body, html {
 
 img {
   width: 400px; }
+
+.container-fluid {
+  width: 50%;
+  margin-left: 15%;
+  text-align: center; }
+
+article {
+  border: 2px solid black;
+  margin: 15px; }
+
+.dreamDetails {
+  text-align: left;
+  background-color: lightGray; }
