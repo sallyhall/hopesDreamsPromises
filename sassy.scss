@@ -1,26 +1,81 @@
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
 body, html{
   margin: 0;
   padding: 0;
 }
-
+body{
+  background-image: url("images.jpeg");
+}
 .hidden{
   display: none;
 }
 
 img{
-  width: 400px;
+  width: 90%;
+  margin:auto;
 }
 
 .container-fluid{
-  width:50%;
-  margin-left:15%;
-  text-align: center;
+  width:75%;
+  margin: auto;
+  // text-align: center;
 }
 article{
-  border:2px solid black;
+  width: 28%;
+  height: 285px;
+  border: 2px solid #337ab7;
   margin: 15px;
+  padding: 15px;
+  border-radius: 3px;
+  background-color: white;
+  display: inline-block;
+  vertical-align: top;
+}
+.detailDream{
+  width: 90%;
+  height:600px;
+}
+.cartDream{
+  height:325px;
 }
 .dreamDetails{
+  height: 125px;
+  padding:0 2px;
   text-align: left;
   background-color: lightGray;
+}
+
+header{
+  padding:20px;
+  background-color: #337ab7;
+  small{
+    color:white;
+  }
+}
+
+input{
+  margin: 2px;
+}
+
+.quantity{
+  width:30px;
+}
+
+.removeCart{
+  display: block;
+}
+
+.adminButton{
+  display: block;
 }

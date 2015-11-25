@@ -36,22 +36,34 @@
 
   })
   .controller('CartController', function ($scope,CartServices) {
-    $scope.cartDreams = CartServices.getPurchases();
+    var updateCart = function () {
+      $scope.cartDreams = CartServices.getPurchases();
+      $scope.totalCost = CartServices.getTotalCost($scope.cartDreams);
+    }
+    updateCart();
 
     $scope.removeFromCart = function(dream){
       CartServices.removeFromCart(dream);
+      updateCart();
+
     };
     $scope.updateQuantity = function(dream, num){
       console.log("controller: changing quantity of "+dream.title+" to "+num);
       CartServices.updateQuantity(dream,num);
+      updateCart();
+
     };
     $scope.emptyCart = function(){
       CartServices.clearCart();
+      updateCart();
+
     };
     $scope.removeFromCart = function(dream){
       CartServices.removeFromCart(dream);
+      updateCart();
+
     };
-    $scope.totalCost = CartServices.getTotalCost($scope.cartDreams);
+
 
   });
 

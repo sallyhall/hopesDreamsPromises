@@ -1,6 +1,6 @@
 <ng-include src="'views/header.html'"></ng-include>
 <div class="container-fluid">
-  <div class="dream" data-id = "{{dream._id}}">
+  <article class="dream" data-id = "{{dream._id}}">
     <a href="#/admin/{{dream._id}}">
       <ng-include src="'views/dream.html'"></ng-include>
     </a>
@@ -9,6 +9,6 @@
     <textarea name="dream-description" ng-model="dream.description" >{{dream.description}}</textarea>
     <textarea name="dream-url" ng-model="dream.url" >{{dream.url}}</textarea>
     <a href="#/admin"><input type="button" ng-click="editDream(dream)" name="dream-edit-submit" value="Submit Edits"></a>
-  </div>
+  </article>
 </div>
 <ng-include src="'views/footer.html'"></ng-include>

@@ -3,15 +3,15 @@
   <input type="button" ng-click = "emptyCart()" name="name" value="Empty Cart">
   <a href="#/checkout"><input type="button" name="name" value="Check Out"></a>
 
-  <div class="totalCost">{{totalCost|currency}}</div>
-  <article ng-repeat = "dream in cartDreams" class = "dream" data-id = "{{dream._id}}">
+  <div class="totalCost">Total: {{totalCost|currency}}</div>
+  <article ng-repeat = "dream in cartDreams" class = "cartDream" data-id = "{{dream._id}}">
     <a href="#/dreams/{{dream._id}}">
       <ng-include src="'views/dream.html'"></ng-include>
-      <span class="quantity">{{dream.quantity}} in Cart</span>
+      <span class="quantity">{{dream.quantity}}</span>
     </a>
-    <input type="text" ng-model="quantity" placeholder "quantity" value="">
-    <a href="#/cart"><input type="button" ng-click = "updateQuantity(dream,quantity)" name="name" value="Update Quantity"></a>
-    <a href="#/cart"><input type="button" ng-click = "removeFromCart(dream)" name="name" value="Remove from Cart"></a>
+    <input type="text" class="quantity" ng-model="quantity" placeholder "quantity" value="">
+    <a href="#/cart"><input type="button" ng-click = "updateQuantity(dream,quantity)" name="name" value="Update Num"></a>
+    <a href="#/cart"><input class="removeCart" type="button" ng-click = "removeFromCart(dream)" name="name" value="Remove from Cart"></a>
   </article>
 </div>
 <ng-include src="'views/footer.html'"></ng-include>

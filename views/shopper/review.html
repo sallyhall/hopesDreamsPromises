@@ -1,10 +1,10 @@
 <ng-include src="'views/header.html'"></ng-include>
 <div class="container-fluid">
-  <div class="dream" data-id = "{{dream._id}}">
+  <article class="dream" data-id = "{{dream._id}}">
     <a href="#/dreams/{{dream._id}}">
       <ng-include src="'views/dream.html'"></ng-include>
     </a>
-  </div>
+  </article>
   <div class="reviewForm">
     <input type="text" name="review-Name" ng-model="review.name" placeholder="Name">
     <textarea name="review-Text" ng-model="review.text"> Review </textarea>
