@@ -1,7 +1,9 @@
 # get-to-the-shoppah
 
 Class assignment.
+
 Deployment instructions:
+
 1. Clone repo locally.
 2. In main repo, run `bower install`
 3. In main repo, run `serve`
