@@ -1,5 +1,12 @@
 # get-to-the-shoppah
 
+Class assignment.
+Deployment instructions:
+1. Clone repo locally.
+2. In main repo, run `bower install`
+3. In main repo, run `serve`
+4. Navigate to http://localhost:3000/#/
+
 ## Description
 It's beginning to look a lot like Angular, everywhere you go....take a look at the npm, time to install again, with Angular and using the ng-show!
 
