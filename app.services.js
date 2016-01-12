@@ -33,17 +33,16 @@
     var addToCart = function(dream){
       var cartArray = JSON.parse(localStorage.getItem("shoppingCart"));
       if(!cartArray) {cartArray=[];}
+      //check to see if item is in cart
       var idx = _.chain(cartArray).pluck("_id").indexOf(dream._id).value();
       if(idx===-1){
         dream = angular.extend({},dream,{quantity:1});
         cartArray.push(dream);
-
       }
       else{
         cartArray[idx].quantity++;
       }
       localStorage.setItem("shoppingCart",JSON.stringify(cartArray));
-      console.log(cartArray);
     };
 
     return{
